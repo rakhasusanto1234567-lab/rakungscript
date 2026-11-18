@@ -549,7 +549,7 @@ local Build = {
     BreakTimes = {},     -- tile yang terus balik lagi setelah digali
     LavaSkip = {},       -- jeda singkat hanya jika pukulan lava gagal
     LavaCleared = 0,
-    PunchMs = 200,       -- jeda tangan Dirt Farm; tidak mengubah Auto Farm / Pabrik
+    PunchMs = 100,       -- jeda tangan Dirt Farm; tidak mengubah Auto Farm / Pabrik
     Reserve = 0,         -- block yang tidak boleh dipasang (disisakan untuk bikin seed)
     RESERVE = 10,        -- sisakan block segini saat produksi
     BreakX = -1, BreakY = -1, -- posisi break produksi (belum diatur = otomatis di ujung kanan baris)
