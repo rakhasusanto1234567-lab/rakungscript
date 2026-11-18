@@ -1,11 +1,11 @@
--- Rakung Hub | MAIN v5.9.27 | Performance r1
+-- RakungHub | MAIN v5.9.27 | Performance r1
 local G = _G
 if type(getgenv) == "function" then
     local ok, environment = pcall(getgenv)
     if ok and type(environment) == "table" then G = environment end
 end
 
-for _, key in ipairs({ "__KzoyzOpus", "__GTFarm", "__ZekioSupremeTest" }) do
+for _, key in ipairs({ "__RakungHub", "__GTFarm", "__RakungHubTest" }) do
     local previous = G[key]
     if type(previous) == "table" then
         local cleanup = rawget(previous, "Cleanup")
@@ -15,7 +15,7 @@ for _, key in ipairs({ "__KzoyzOpus", "__GTFarm", "__ZekioSupremeTest" }) do
 end
 
 local Session = { Version = "5.9.27" }
-G.__KzoyzOpus = Session
+G.__RakungHub = Session
 local function alive()
     return G.__KzoyzOpus == Session and not Session.Failed and not Session.Closed
 end
@@ -52,7 +52,7 @@ do (function()
             if not label then
                 local parent = Session.GuiParent()
                 gui = Instance.new("ScreenGui")
-                gui.Name = "ZekioSupremeStartup"
+                gui.Name = "RakungHub"
                 gui.ResetOnSpawn, gui.IgnoreGuiInset, gui.DisplayOrder = false, true, 2000000
                 gui.Parent = parent
 
@@ -60,7 +60,7 @@ do (function()
                 frame.AnchorPoint = Vector2.new(0.5, 1)
                 frame.Position = UDim2.new(0.5, 0, 0.97, 0)
                 frame.Size = UDim2.new(0.9, 0, 0, 174)
-                frame.BackgroundColor3 = Color3.fromRGB(20, 22, 29)
+                frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                 frame.Parent = gui
 
                 label = Instance.new("TextLabel")
@@ -77,7 +77,7 @@ do (function()
                 close.Text, close.Parent = "X", frame
                 close.MouseButton1Click:Connect(function() Session.CloseBoot() end)
             end
-            label.Text = "ZEKIO SUPREME v5.9.27\n" .. tostring(message):sub(1, 1100)
+            label.Text = "Rakung Hub v5.9.27\n" .. tostring(message):sub(1, 1100)
         end)
     end
 
