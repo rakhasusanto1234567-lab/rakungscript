@@ -1574,7 +1574,7 @@ Farmer.Drop = false
 if Farmer.HarvestOnly then Farmer.Harvest, Farmer.Plant = true, false end
 -- update 1084: game memberi jeda minimal antar aksi (place ~0.135 dtk, pukul ~0.19 dtk)
 State.PlaceMs = math.max(State.PlaceMs, 50)
-State.BreakMs = math.max(State.BreakMs, 190)
+State.BreakMs = math.max(State.BreakMs, 100)
 Farmer.HarvestMs = math.max(Farmer.HarvestMs, 140)
 Farmer.PlantMs = math.max(Farmer.PlantMs, 140)
 Config.add("Misc", Misc, { "Speed" })
