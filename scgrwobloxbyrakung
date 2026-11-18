@@ -24,7 +24,7 @@ end
 do (function()
     local gui, label
     local stageAt, dismissed = os.clock(), false
-    Session.Stage = "Memulai Zekio Supreme v5.9.27"
+    Session.Stage = "Memulai Rakung Hub v5.9.27"
 
     function Session.GuiParent(fallback)
         if not fallback then
