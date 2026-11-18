@@ -9979,8 +9979,8 @@ local function newScreenGui(name)
 end
 
 local GRID_RADIUS = 3
-local CELL = 38
-local GAP = 4
+local CELL = 36
+local GAP = 3
 
 local GridGui = newScreenGui("ZekioSupremeGrid")
 UI.GridGui = GridGui
