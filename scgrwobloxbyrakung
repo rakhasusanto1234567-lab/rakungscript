@@ -2399,36 +2399,6 @@ local function canBreak(id)
     return h == nil or h > 0
 end
 
--- Game abaikan pukulan ke tile yang baru di-place (< 0.3 detik)
-local PLACE_GUARD = 0.1
-
--- Place 1 tile kalau kosong. Hasil: "place" / "habis" / nil
-local function tryPlace(x, y)
-    local sel = farmBlock()
-    if not sel then return nil end
-    local fg = tileAt("fg", x, y)
-    if fg == nil then return nil end
-    local bg = tileAt("bg", x, y)
-    local it = ItemDB[sel]
-    local layer = (it and it.background) and "bg" or "fg"
-    local cur = (layer == "bg") and bg or fg
-    if not (cur == 0 and (layer == "bg" or fg == 0)) then return nil end
-    if invCount(sel) <= 0 then return "habis" end
-
-    local sent, reason = sendSetTile(layer, x, y, sel)
-    if not sent then
-        State.LastAction = "Place gagal: " .. tostring(reason or "fungsi place / pengiriman tidak tersedia")
-        return nil, "place-error"
-    end
-    if Refs.Inv then pcall(function() Refs.Inv:remove(sel, 1) end) end
-    local key = x .. "," .. y
-    HitCount[key] = nil
-    PlacedAt[key] = os.clock()
-    State.Placed += 1
-    State.LastAction = "Place " .. itemName(sel) .. " (" .. x .. "," .. y .. ")"
-    return "place"
-end
-
 -- Masih ada yang bisa dipecah di tile ini? (block depan / background)
 local function breakableAt(x, y)
     local fg = tileAt("fg", x, y)
