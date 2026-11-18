@@ -442,9 +442,9 @@ end)()
 local State = {
     Running = false,
     Mode = "Place + Break",       -- "Place + Break" | "Break saja" | "Place saja"
-    PlaceMs = 250,                -- jeda setelah tiap place
+    PlaceMs = 50,                -- jeda setelah tiap place
     BreakMs = 100,                -- jeda tiap pukulan (normal 220)
-    AfterBreakMs = 100,           -- jeda setelah block hancur
+    AfterBreakMs = 50,           -- jeda setelah block hancur
     HitsOverride = 0,             -- jumlah pukulan manual (0 = otomatis)
     BreakBackground = true,       -- selalu ikut pecah background (tanpa tombol)
     MultiTarget = 1,              -- jumlah tile dipukul bergantian (1 = biasa)
