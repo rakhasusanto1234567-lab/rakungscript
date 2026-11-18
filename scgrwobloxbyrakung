@@ -12693,7 +12693,7 @@ do (function()
                             or "otomatis (kanan karakter, dekat ujung baris)"),
                         "Aksi     : " .. Build.Status,
                         ("Lava     : prioritas otomatis | dibersihkan %d | jeda pukul %d ms"):format(
-                            Build.LavaCleared or 0, Build.PunchMs or 200),
+                            Build.LavaCleared or 0, Build.PunchMs or 100),
                     }, "\n")
                 else
                     txt = "Data world belum ketemu"
