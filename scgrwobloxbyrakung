@@ -6022,7 +6022,7 @@ function Move.farmerArea(s)
                     -- Tangan biasa tetap punya jeda. Selesaikan semua target
                     -- dari posisi ini; jangan kirim tile kedua saat pukulan pertama masih cooldown.
                     if cfg.focusHarvest and os.clock() < nextPunchAt then
-                        if not waitAuto((nextPunchAt - os.clock()) * 1000) then return done end
+                        if not waitAuto((nextPunchAt - os.clock()) * 100) then return done end
                         if not live() then return done end
                     end
                     local punch = Refs.Punch
