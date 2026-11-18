@@ -9267,7 +9267,7 @@ function Build.breakSession(o)
     if not o.live() then return false end
     local before = invCount(o.seed)
     local want = math.max(1, Build.freeSpots(o))
-    State.Override = { offsets = Build.Tiles, block = o.block, mode = "Place + Break", breakMs = Build.PunchMs or 200 }
+    State.Override = { offsets = Build.Tiles, block = o.block, mode = "Place + Break", breakMs = Build.PunchMs or 100 }
     State.Quiet = true
     State.WaitingDrops, State.WorkReason = nil, nil
     table.clear(HitCount)
