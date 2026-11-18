@@ -9978,14 +9978,14 @@ local function newScreenGui(name)
     return sg
 end
 
-local GRID_RADIUS = 2
+local GRID_RADIUS = 3
 local CELL = 38
 local GAP = 4
 
 local GridGui = newScreenGui("ZekioSupremeGrid")
 UI.GridGui = GridGui
 
-local side = GRID_RADIUS * 2 + 1
+local side = GRID_RADIUS * 3 + 1
 local gridSize = side * CELL + (side - 1) * GAP
 
 local Panel = Instance.new("Frame")
@@ -10010,7 +10010,7 @@ Title.Text = I18N.T("Grid Tile")
 Title.Parent = Panel
 
 local CloseBtn = Instance.new("TextButton")
-CloseBtn.Size = UDim2.fromOffset(25, 25)
+CloseBtn.Size = UDim2.fromOffset(24, 24)
 CloseBtn.Position = UDim2.new(1, -30, 0, 6)
 CloseBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 75)
 CloseBtn.Text = "X"
