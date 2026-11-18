@@ -10637,7 +10637,7 @@ addNumber(SpeedTab, {
 addNumber(SpeedTab, {
     Title = "Speed Break (ms)",
     Desc = "Jeda tiap pukulan (normal 220). Dipakai juga Clear",
-    Min = 200, Max = 1000, Step = 10, Default = State.BreakMs,
+    Min = 100, Max = 1000, Step = 10, Default = State.BreakMs,
     Callback = function(v) State.BreakMs = math.floor(v) end,
 })
 
