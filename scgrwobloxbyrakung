@@ -8763,7 +8763,7 @@ function Build.punch(x, y, includeBg, live)
     local before = State.Broken
     local result = tryBreak(x, y, includeBg)
     if not result then Build.Status = State.LastAction or "Pukulan game gagal; tekan Hubungkan ke game" end
-    Build.NextPunchAt = os.clock() + math.max(200, Build.PunchMs or 200) / 1000
+    Build.NextPunchAt = os.clock() + math.max(200, Build.PunchMs or 200) / 100
     if result == "hit" then
         while valid() and tileAt(layer, x, y) == id and os.clock() < Build.NextPunchAt do
             task.wait(math.min(0.025, Build.NextPunchAt - os.clock()))
@@ -9519,7 +9519,7 @@ local function buildLoop(runId)
                             table.clear(BadEdge)
                             Reach = nil
                         end
-                        if not waitAuto(1000) then break end
+                        if not waitAuto(100) then break end
                         continue
                     end
                 end
