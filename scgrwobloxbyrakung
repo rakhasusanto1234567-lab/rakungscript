@@ -789,7 +789,7 @@ I18N.EN = {
     ["Dipakai juga Clear, Farmer, Splice & Pabrik. Terlalu jauh bisa ditolak server"] =
         "Also used by Clear, Farmer, Splice & Factory. Too far may be rejected by the server",
     ["Buka Grid Tile"] = "Open Tile Grid",
-    ["Kotak 5x5, tengah = karakter"] = "5x5 grid, center = character",
+    ["Kotak 6x6, tengah = karakter"] = "6x6 grid, center = character",
     -- Clear
     ["Status Clear"] = "Clear Status",
     ["Bersihkan dari baris atas ke bawah"] = "Clear from the top row down",
@@ -980,7 +980,7 @@ I18N.EN = {
     ["Seed A (ditanam)"] = "Seed A (planted)",
     ["Seed B (di-splice)"] = "Seed B (spliced)",
     ["Keliling world (A*)"] = "Roam world (A*)",
-    ["Nyala: jalan ke seluruh world. Mati: hanya tile Grid 5x5"] = "On: walk the whole world. Off: only the 5x5 Grid tiles",
+    ["Nyala: jalan ke seluruh world. Mati: hanya tile Grid 6x6"] = "On: walk the whole world. Off: only the 6x6 Grid tiles",
     ["Jeda tanam / splice (ms)"] = "Plant / splice delay (ms)",
     -- Lahan
     ["Status Dirt Farm"] = "Dirt Farm Status",
@@ -9958,7 +9958,7 @@ table.insert(Connections, LocalPlayer.Idled:Connect(function()
 end))
 
 ---------------------------------------------------------------------
--- GUI TAMBAHAN: Grid Tile 5x5 + tombol Fly ▲/▼
+-- GUI TAMBAHAN: Grid Tile 6x6 + tombol Fly ▲/▼
 ---------------------------------------------------------------------
 Session.Report("Menyiapkan panel dan kontrol")
 local guiParent = Session.GuiParent(PlayerGui)
@@ -10415,7 +10415,7 @@ addNumber(Box.FarmCtl, {
 safe(function()
     Box.FarmCtl:Button({
         Title = "Buka Grid Tile",
-        Desc = "Kotak 5x5, tengah = karakter",
+        Desc = "Kotak 6x6, tengah = karakter",
         Callback = function() GridGui.Enabled = true end,
     })
 end)
@@ -12514,7 +12514,7 @@ do (function()
     safe(function()
         sCtl:Toggle({
             Title = "Keliling world (A*)",
-            Desc = "Nyala: jalan ke seluruh world. Mati: hanya tile Grid 5x5",
+            Desc = "Nyala: jalan ke seluruh world. Mati: hanya tile Grid 6x6",
             Value = Splice.Roam,
             Callback = function(on)
                 if Splice.Running then Splice.stop("Mode diganti, nyalakan lagi") end
