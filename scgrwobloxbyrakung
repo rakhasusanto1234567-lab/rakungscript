@@ -2400,7 +2400,7 @@ local function canBreak(id)
 end
 
 -- Game abaikan pukulan ke tile yang baru di-place (< 0.3 detik)
-local PLACE_GUARD = 0.32
+local PLACE_GUARD = 0.1
 
 -- Place 1 tile kalau kosong. Hasil: "place" / "habis" / nil
 local function tryPlace(x, y)
