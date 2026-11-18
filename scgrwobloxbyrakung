@@ -15,9 +15,9 @@ for _, key in ipairs({ "__RakungHub", "__GTFarm", "__RakungHubTest" }) do
 end
 
 local Session = { Version = "5.9.27" }
-G.__RakungHub = Session
+G.__KzoyzOpus = Session
 local function alive()
-    return G.__RakungHub == Session and not Session.Failed and not Session.Closed
+    return G.__KzoyzOpus == Session and not Session.Failed and not Session.Closed
 end
 
 -- Startup tampil sebelum modul game dan WindUI dimuat.
