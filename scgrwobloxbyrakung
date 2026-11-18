@@ -10010,7 +10010,7 @@ Title.Text = I18N.T("Grid Tile")
 Title.Parent = Panel
 
 local CloseBtn = Instance.new("TextButton")
-CloseBtn.Size = UDim2.fromOffset(24, 24)
+CloseBtn.Size = UDim2.fromOffset(25, 25)
 CloseBtn.Position = UDim2.new(1, -30, 0, 6)
 CloseBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 75)
 CloseBtn.Text = "X"
