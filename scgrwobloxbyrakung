@@ -4047,7 +4047,7 @@ local MAX_EXPAND = 8000
 local BLOCK_COST = 2
 
 local function reachOffsets(R)
-    return floor(R), math.ceil(-R + 0.025), floor(R + 0.025)
+    return floor(R), math.ceil(-R + 0.036), floor(R + 0.036)
 end
 
 local function astar(sx, sy, goals, gx, gy, R, useBlock)
