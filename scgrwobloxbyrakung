@@ -9985,7 +9985,7 @@ local GAP = 4
 local GridGui = newScreenGui("ZekioSupremeGrid")
 UI.GridGui = GridGui
 
-local side = GRID_RADIUS * 3 + 1
+local side = GRID_RADIUS * 2 + 1
 local gridSize = side * CELL + (side - 1) * GAP
 
 local Panel = Instance.new("Frame")
